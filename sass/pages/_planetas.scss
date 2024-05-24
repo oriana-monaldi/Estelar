@@ -1,7 +1,7 @@
 .contenedor {
     .fotografia {
         width: 100%;
-        height: auto;
+        height: calc(100vh - 56px);
     }
     .titulosPlanetas {
         position: absolute; 
