@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   margin: 0;
@@ -259,20 +260,23 @@ footer .container .footer-right a:hover {
   background-color: transparent;
   border-radius: 5px;
   position: absolute;
-  top: 0px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   overflow: hidden;
   cursor: pointer;
   transition: 0.5s;
   font-weight: 400;
   font-size: 17px;
-  border: 4px solid;
+  border: 4px solid var(--color);
   font-family: inherit;
   text-transform: uppercase;
   color: var(--color);
   z-index: 1;
 }
 
-.btn::before, .btn::after {
+.btn::before,
+.btn::after {
   content: "";
   display: block;
   width: 50px;
@@ -295,7 +299,8 @@ footer .container .footer-right a:hover {
   top: calc(100% + 1em);
 }
 
-.btn:hover::before, .btn:hover::after {
+.btn:hover::before,
+.btn:hover::after {
   height: 410px;
   width: 410px;
 }
@@ -306,6 +311,63 @@ footer .container .footer-right a:hover {
 
 .btn:active {
   filter: brightness(0.8);
+}
+
+.scroll {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.scroll:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(181, 160, 255);
+  align-items: center;
+}
+
+.scroll:hover .svgIcon {
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.scroll::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Back to Top";
+  color: white;
+  font-size: 0px;
+}
+
+.scroll:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  transition-duration: 0.3s;
 }
 
 .whatsapp {
@@ -407,120 +469,139 @@ button button:hover {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.grid-container2 {
+.contenedor-planetas {
   display: grid;
-  grid-template-rows: repeat(8, auto);
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  max-width: 1200px;
-  margin: 20px auto;
+  grid-template-columns: repeat(2, 400px);
+  display: grid;
+  padding: 20px;
+  gap: 40px;
+  justify-content: center;
 }
 
-.cardPlanetas {
-  position: relative;
-  width: 100%;
-  height: 300px;
+.tarjeta {
   text-align: center;
-  border-radius: 10px;
+  position: relative;
+  text-align: center;
   padding: 20px;
-  color: rgb(255, 255, 255);
+  border-radius: 10px;
   overflow: hidden;
+  min-height: 300px;
 }
-.cardPlanetas h2 {
-  font-family: Mono;
+.tarjeta h2 {
+  background-color: rgba(30, 22, 22, 0.261);
+  color: rgb(255, 255, 255);
 }
-.cardPlanetas p {
-  font-family: Roboto;
-}
-.cardPlanetas.mercurio {
+
+.tarjeta-mercurio {
   background-image: url("../../assets/sistemaSolar/mercurio.webp");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
-.cardPlanetas.venus {
+
+.tarjeta-venus {
   background-image: url("../../assets/sistemaSolar/venus.webp");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
-.cardPlanetas.tierra {
+
+.tarjeta-tierra {
   background-image: url("../../assets/sistemaSolar/tierra.webp");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
-.cardPlanetas.marte {
+
+.tarjeta-marte {
   background-image: url("../../assets/sistemaSolar/marte.webp");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
-.cardPlanetas.jupiter {
+
+.tarjeta-jupiter {
   background-image: url("../../assets/sistemaSolar/jupiter.webp");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
-.cardPlanetas.saturno {
+
+.tarjeta-saturno {
   background-image: url("../../assets/sistemaSolar/saturno.webp");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
-.cardPlanetas.urano {
+
+.tarjeta-urano {
   background-image: url("../../assets/sistemaSolar/urano.webp");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
-.cardPlanetas.neptuno {
+
+.tarjeta-neptuno {
   background-image: url("../../assets/sistemaSolar/neptuno.webp");
   background-size: cover;
   background-position: center;
-}
-.cardPlanetas::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(61, 61, 61, 0.171);
-  z-index: 1;
-}
-.cardPlanetas:hover::before {
-  background: rgba(0, 0, 0, 0);
-}
-.cardPlanetas h2, .cardPlanetas p, .cardPlanetas .btn {
-  position: relative;
-  z-index: 2;
+  background-repeat: no-repeat;
 }
 
-@media only screen and (max-width: 1620px) {
-  .card[data-flip-key] {
-    width: 500px;
-    height: 200px;
-  }
+.contenedor-general {
+  display: flex;
+  flex-direction: column;
 }
-@media only screen and (max-width: 1450px) {
-  .card[data-flip-key] {
-    margin: 5px auto;
-    width: 480px;
-    height: 150px;
-  }
-  .card[data-flip-key] h2 {
-    font-size: 15px;
-  }
-  .card[data-flip-key] p {
-    font-size: 10px;
-  }
+
+.grid-container {
+  margin-bottom: 20px;
 }
-@media (max-width: 836px) {
-  .card[data-flip-key] {
-    width: 280px;
-    height: 150px;
-  }
-  .card[data-flip-key] h2 {
-    font-size: 15px;
-  }
-  .card[data-flip-key] p {
-    font-size: 10px;
-  }
+
+.grid-container {
+  display: grid;
+  color: rgb(255, 255, 255);
+  grid-template-columns: repeat(4fr, auto);
+  grid-template-rows: repeat(2fr, auto);
+  grid-template-areas: "foto titulo titulo" "descubrimiento expediciones orbita";
+  grid-gap: 10px;
 }
+.grid-container h2 {
+  text-align: center;
+  font-family: Mono;
+  font-size: 50px;
+}
+.grid-container h3 {
+  text-align: center;
+  font-family: Roboto;
+}
+.grid-container p {
+  font-family: Roboto;
+}
+
+.img-tamaño {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.titulo {
+  grid-area: titulo;
+}
+
+.descubrimiento {
+  grid-area: descubrimiento;
+  width: 400px;
+}
+
+.expediciones {
+  grid-area: expediciones;
+  width: 400px;
+}
+
+.orbita {
+  grid-area: orbita;
+  width: 400px;
+}
+
 .accordion {
   max-width: 800px;
   margin: 0 auto;

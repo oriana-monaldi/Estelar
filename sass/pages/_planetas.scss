@@ -15,116 +15,102 @@
 }
 
 /////////////////////////////////////////////////////
-/// 
-/// 
-.grid-container2 {
+.contenedor-planetas {
     display: grid;
-    grid-template-rows: repeat(8, auto);
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px; 
-    max-width: 1200px; 
-    margin: 20px auto; 
+    grid-template-columns: repeat(2, 400px);     
+    display: grid;
+    padding: 20px;
+    gap: 40px;
+    justify-content: center;
+}
+.tarjeta {
+    text-align:center;
+    position: relative; 
+    text-align: center;
+    padding: 20px; 
+    border-radius: 10px; 
+    overflow: hidden;
+    min-height: 300px;
+    h2 {
+        background-color: rgba(30, 22, 22, 0.261);
+        color:rgb(255, 255, 255);
+
+    }
 }
 
+$planetas: mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno;
 
-$imagenesPlanetas: (
-    mercurio: 'mercurio.webp',
-    venus: 'venus.webp',
-    tierra: 'tierra.webp',
-    marte: 'marte.webp',
-    jupiter: 'jupiter.webp',
-    saturno: 'saturno.webp',
-    urano: 'urano.webp',
-    neptuno: 'neptuno.webp'
-);
+@for $i from 1 through length($planetas) {
+    $planeta: nth($planetas, $i);
+    .tarjeta-#{$planeta} {
+        background-image: url('../../assets/sistemaSolar/#{$planeta}.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
 
-.cardPlanetas {
-    position: relative;
-    width: 100%; 
-    height: 300px; 
-    text-align: center; 
-    border-radius: 10px;
-    padding: 20px;
-    color: $primaryColor; 
-    overflow: hidden;
+///////////////////
+/// 
+/// 
+/// 
+/// 
+.contenedor-general {
+    display: flex;
+    flex-direction: column; 
+}
+
+.grid-container {
+    margin-bottom: 20px; 
+}
+
+.grid-container {
+    display: grid;
+    color: $primaryColor;
+    grid-template-columns: repeat(4fr, auto);
+    grid-template-rows: repeat(2fr, auto);
+    grid-template-areas: 
+      "foto titulo titulo"
+      "descubrimiento expediciones orbita" ;
+    grid-gap: 10px;
     h2 {
+        text-align: center;
         font-family: $font2;
+        font-size: 50px;
+    }
+    h3 {
+        text-align: center;
+        font-family: $font3;
     }
     p {
         font-family: $font3;
     }
 
-    @each $planeta, $imagen in $imagenesPlanetas {
-        &.#{$planeta} {
-            background-image: url('../../assets/sistemaSolar/#{$imagen}');
-            background-size: cover;
-            background-position: center;
-        }
-    }
+  }
+  .img-tamaño {
+    max-width: 300px; 
+    max-height: 300px;
+  }
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: rgba(61, 61, 61, 0.171); 
-        z-index: 1;
-    }
+  .titulo {
+    grid-area: titulo;
+  }
+  
+  .descubrimiento {
+    grid-area: descubrimiento;
+    width: 400px;
 
-    &:hover::before {
-        background: rgba(0, 0, 0, 0); 
-    }
+  }
+  
+  .expediciones {
+    grid-area: expediciones;
+    width: 400px;
 
-    h2, p, .btn {
-        position: relative;
-        z-index: 2; 
-    }
-}
+  }
+  
+  .orbita {
+    grid-area: orbita;
+    width: 400px;
 
-
-/////////////////media quiery//////////////////////
-@media only screen and (max-width: 1620px){
-    .card {
-        &[data-flip-key] {
-            width: 500px; 
-            height: 200px;
-        }
-    }
-}
-
-@media only screen and (max-width: 1450px){
-    .card {
-        &[data-flip-key] {
-            margin: 5px auto;
-            width: 480px;
-            height: 150px;
-           
-        h2 {
-            font-size: 15px;
-        }
-        p {
-            font-size: 10px;
-        }
-    }
-    }
-}
-@media (max-width: 836px) {
-    .card {
-        &[data-flip-key] {
-            width: 280px;
-            height: 150px;
-           
-        h2 {
-            font-size: 15px;
-        }
-        p {
-            font-size: 10px;
-        }
-        }
-    }
-   
-}
-
- 
+  }
+  
