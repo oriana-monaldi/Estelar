@@ -25,33 +25,16 @@ h1 {
   font-family: Mono;
 }
 
-.titulosPlanetias {
-  margin: 40px;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  font-family: Groundation;
-  font-size: 80px;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.planetas-animados-container {
+.TituloPrincipal {
   position: absolute;
-  top: 67px;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 67px);
-  overflow: hidden;
-  pointer-events: none;
+  top: 250px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 90px;
+  text-shadow: 4px 1px 2px rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   z-index: 1;
+  font-family: Galaxy;
 }
 
 @media only screen and (max-width: 1450px) {
@@ -270,166 +253,6 @@ footer .container .footer-right a:hover {
   background-image: url("../../assets/lanzamiento.webp");
 }
 
-.cardPlaneta:nth-child(6) {
-  background-image: url("../../assets/cohete.webp");
-}
-
-.TituloPrincipal {
-  position: absolute;
-  top: 250px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 90px;
-  text-shadow: 4px 1px 2px rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
-  z-index: 1;
-  font-family: Galaxy;
-}
-
-.cardPlanetas {
-  position: relative;
-  width: 100%;
-  height: 300px;
-  text-align: center;
-  border-radius: 10px;
-  padding: 20px;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-}
-.cardPlanetas h2 {
-  font-family: Mono;
-}
-.cardPlanetas p {
-  font-family: Roboto;
-}
-.cardPlanetas.mercurio {
-  background-image: url("../../assets/sistemaSolar/mercurio.webp");
-  background-size: cover;
-  background-position: center;
-}
-.cardPlanetas.venus {
-  background-image: url("../../assets/sistemaSolar/venus.webp");
-  background-size: cover;
-  background-position: center;
-}
-.cardPlanetas.tierra {
-  background-image: url("../../assets/sistemaSolar/tierra.webp");
-  background-size: cover;
-  background-position: center;
-}
-.cardPlanetas.marte {
-  background-image: url("../../assets/sistemaSolar/marte.webp");
-  background-size: cover;
-  background-position: center;
-}
-.cardPlanetas.jupiter {
-  background-image: url("../../assets/sistemaSolar/jupiter.webp");
-  background-size: cover;
-  background-position: center;
-}
-.cardPlanetas.saturno {
-  background-image: url("../../assets/sistemaSolar/saturno.webp");
-  background-size: cover;
-  background-position: center;
-}
-.cardPlanetas.urano {
-  background-image: url("../../assets/sistemaSolar/urano.webp");
-  background-size: cover;
-  background-position: center;
-}
-.cardPlanetas.neptuno {
-  background-image: url("../../assets/sistemaSolar/neptuno.webp");
-  background-size: cover;
-  background-position: center;
-}
-.cardPlanetas::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(61, 61, 61, 0.171);
-  z-index: 1;
-}
-.cardPlanetas:hover::before {
-  background: rgba(0, 0, 0, 0);
-}
-.cardPlanetas h2, .cardPlanetas p, .cardPlanetas .btn {
-  position: relative;
-  z-index: 2;
-}
-
-.card {
-  perspective: 1000px;
-  background-color: rgb(0, 0, 0);
-  margin: 30px;
-  border: solid 5px rgb(255, 255, 255);
-}
-.card[data-flip-key] {
-  position: relative;
-  width: 800px;
-  height: 200px;
-  transform-style: preserve-3d;
-  transition: transform 0.5s;
-}
-.card[data-flip-key]:hover {
-  transform: rotateY(180deg);
-}
-.card[data-flip-key] h2, .card[data-flip-key] p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  text-align: center;
-  margin: 0;
-  color: rgb(255, 255, 255);
-  transition: opacity 0.5s;
-  backface-visibility: hidden;
-}
-.card[data-flip-key] p {
-  opacity: 0;
-  transform: translate(-50%, -50%) rotateY(180deg);
-}
-.card[data-flip-key]:hover p {
-  opacity: 1;
-}
-.card[data-flip-key]:hover h2 {
-  opacity: 0;
-}
-
-@media only screen and (max-width: 1620px) {
-  .card[data-flip-key] {
-    width: 500px;
-    height: 200px;
-  }
-}
-@media only screen and (max-width: 1450px) {
-  .card[data-flip-key] {
-    margin: 5px auto;
-    width: 480px;
-    height: 150px;
-  }
-  .card[data-flip-key] h2 {
-    font-size: 15px;
-  }
-  .card[data-flip-key] p {
-    font-size: 10px;
-  }
-}
-@media (max-width: 836px) {
-  .card[data-flip-key] {
-    width: 280px;
-    height: 150px;
-  }
-  .card[data-flip-key] h2 {
-    font-size: 15px;
-  }
-  .card[data-flip-key] p {
-    font-size: 10px;
-  }
-}
 .btn {
   --color: #ffffff;
   padding: 10px;
@@ -570,76 +393,6 @@ button button:hover {
     margin: 0 auto;
   }
 }
-.planet-container {
-  position: fixed;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-}
-
-.planet-image {
-  width: 600px;
-  height: 600px;
-  animation: slideInRight 1s ease-in-out, rotate 30s linear infinite;
-  object-fit: cover;
-  margin-right: 50px;
-  padding: 40px;
-}
-
-.planet-imageSaturno {
-  width: 95%;
-  height: 400px;
-  animation: slideInRight 1s ease-in-out, rotate 30s linear infinite;
-  object-fit: cover;
-  margin-right: 50px;
-  padding: 40px;
-}
-
-@keyframes slideInRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 90;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@media only screen and (max-width: 1450px) {
-  .planet-image {
-    width: 430px;
-    margin-top: 290px;
-    height: auto;
-  }
-  .planet-imageSaturno {
-    width: 380px;
-    margin-top: 175px;
-    height: auto;
-  }
-  .planet-container {
-    position: relative;
-  }
-}
-@media only screen and (max-width: 800px) {
-  .planet-image {
-    width: 300px;
-  }
-  .planet-imageSaturno {
-    margin-top: 100px;
-    width: 290px;
-  }
-  .planet-container {
-    position: relative;
-  }
-}
 .contenedor .fotografia {
   width: 100%;
   height: calc(100vh - 56px);
@@ -654,18 +407,127 @@ button button:hover {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.grid-container {
+.grid-container2 {
   display: grid;
-  grid-template-rows: repeat(3, auto);
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(8, auto);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   max-width: 1200px;
   margin: 20px auto;
 }
 
+.cardPlanetas {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+}
+.cardPlanetas h2 {
+  font-family: Mono;
+}
+.cardPlanetas p {
+  font-family: Roboto;
+}
+.cardPlanetas.mercurio {
+  background-image: url("../../assets/sistemaSolar/mercurio.webp");
+  background-size: cover;
+  background-position: center;
+}
+.cardPlanetas.venus {
+  background-image: url("../../assets/sistemaSolar/venus.webp");
+  background-size: cover;
+  background-position: center;
+}
+.cardPlanetas.tierra {
+  background-image: url("../../assets/sistemaSolar/tierra.webp");
+  background-size: cover;
+  background-position: center;
+}
+.cardPlanetas.marte {
+  background-image: url("../../assets/sistemaSolar/marte.webp");
+  background-size: cover;
+  background-position: center;
+}
+.cardPlanetas.jupiter {
+  background-image: url("../../assets/sistemaSolar/jupiter.webp");
+  background-size: cover;
+  background-position: center;
+}
+.cardPlanetas.saturno {
+  background-image: url("../../assets/sistemaSolar/saturno.webp");
+  background-size: cover;
+  background-position: center;
+}
+.cardPlanetas.urano {
+  background-image: url("../../assets/sistemaSolar/urano.webp");
+  background-size: cover;
+  background-position: center;
+}
+.cardPlanetas.neptuno {
+  background-image: url("../../assets/sistemaSolar/neptuno.webp");
+  background-size: cover;
+  background-position: center;
+}
+.cardPlanetas::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(61, 61, 61, 0.171);
+  z-index: 1;
+}
+.cardPlanetas:hover::before {
+  background: rgba(0, 0, 0, 0);
+}
+.cardPlanetas h2, .cardPlanetas p, .cardPlanetas .btn {
+  position: relative;
+  z-index: 2;
+}
+
+@media only screen and (max-width: 1620px) {
+  .card[data-flip-key] {
+    width: 500px;
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 1450px) {
+  .card[data-flip-key] {
+    margin: 5px auto;
+    width: 480px;
+    height: 150px;
+  }
+  .card[data-flip-key] h2 {
+    font-size: 15px;
+  }
+  .card[data-flip-key] p {
+    font-size: 10px;
+  }
+}
+@media (max-width: 836px) {
+  .card[data-flip-key] {
+    width: 280px;
+    height: 150px;
+  }
+  .card[data-flip-key] h2 {
+    font-size: 15px;
+  }
+  .card[data-flip-key] p {
+    font-size: 10px;
+  }
+}
 .accordion {
   max-width: 800px;
   margin: 0 auto;
+}
+.accordion p {
+  color: rgb(255, 255, 255);
+  font-family: Roboto;
 }
 
 .accordion-btn {
@@ -683,8 +545,6 @@ button button:hover {
   position: relative;
 }
 .accordion-btn:after {
-  content: "\f078";
-  font-family: "Font Awesome 5 Free";
   font-weight: bold;
   position: absolute;
   right: 10px;
@@ -747,64 +607,6 @@ button button:hover {
   .accordion-content {
     font-size: 12px;
     padding: 6px 10px;
-  }
-}
-.eclipse-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.eclipse-container .eclipse {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  border: solid 5px rgb(255, 255, 255);
-  padding: 30px;
-  max-width: 600px;
-  margin-bottom: 20px;
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-}
-.eclipse-container .eclipse:hover {
-  transform: scale(1.05);
-  background-color: rgba(57, 62, 67, 0.8);
-}
-.eclipse-container h2 {
-  font-size: 30px;
-  margin-bottom: 10px;
-  color: rgb(255, 255, 255);
-}
-.eclipse-container .content p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin: 20px;
-  color: rgb(255, 255, 255);
-}
-.eclipse-container .imagenEclipse {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@media (max-width: 740px) {
-  .eclipse-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .eclipse {
-    width: 300px;
   }
 }
 /* Estilos generales para el iframe */
