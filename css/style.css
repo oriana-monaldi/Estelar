@@ -616,7 +616,7 @@ button button:hover {
 }
 .contenedor .fotografia {
   width: 100%;
-  height: calc(100vh - 56px);
+  height: auto;
 }
 .contenedor .titulosPlanetas {
   position: absolute;
@@ -925,54 +925,13 @@ iframe {
     display: block;
   }
 }
-.moon-phases-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  justify-content: space-around;
-  width: 1100px;
-  margin: auto;
-  border-radius: 10px;
-  padding: 20px;
-  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(57, 62, 67, 0.8));
-  animation: pulse 2s infinite alternate;
-  overflow-x: auto;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.05);
-  }
-}
-.moon-phase {
-  text-align: center;
-  padding: 10px;
-}
-.moon-phase img {
-  width: auto;
-  height: 150px;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-.moon-phase h2 {
-  margin-top: 10px;
-  font-size: 20px;
-}
-.moon-phase img:hover {
-  transform: scale(1.1);
-}
-
 .moon-grid-container {
+  padding: 500px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(5, auto);
-  grid-template-areas: "img1 text1" "img2 text2" "img3 text3" "img4 text4" "img5 text5";
+  grid-template-areas: "img1 text1" "text2 img2" "img3 text3" "text4 img4" "img5 text5";
   gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 20px;
 }
 
@@ -980,8 +939,6 @@ iframe {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 350px;
-  height: 200px;
 }
 .image img {
   max-width: 100%;
@@ -1070,19 +1027,6 @@ iframe {
 }
 
 @media (max-width: 1170px) {
-  .moon-phases-grid {
-    grid-template-columns: 1fr;
-    border: none;
-    justify-content: center;
-    max-width: 60%;
-  }
-  .moon-phase {
-    padding: 5px;
-    text-align: center;
-  }
-  .moon-phase h2 {
-    font-size: 18px;
-  }
   .moon-grid-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -1094,17 +1038,6 @@ iframe {
   }
 }
 @media (max-width: 590px) {
-  .moon-phases-grid {
-    width: 60%;
-  }
-  .moon-phase {
-    padding: 5px;
-  }
-  .moon-phase img {
-    width: 130px;
-    height: 130px;
-    object-fit: contain;
-  }
   .moon-grid-container .image {
     width: 80%;
   }
