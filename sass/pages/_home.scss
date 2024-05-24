@@ -1,0 +1,52 @@
+// Estilos generales de la página 
+.titulosPlanetas {
+    margin: 40px;
+    color: $primaryColor;
+    text-align: center;
+    font-family: $font1;
+    font-size: 80px;
+}
+
+//Animacion del titulo
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY($default2);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/////////////////////////////////////////////////////////////////
+////////// Efecto de la tierra al iniciar la página /////////////
+.planetas-animados-container {
+    position: absolute;
+    top: 67px; 
+    left: 0;
+    width: 100%;
+    height: calc(100% - 67px);
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+    
+}
+/////////////////media quiery//////////////////////
+
+@media only screen and (max-width: 1450px) {
+  
+    .titulosPlanetas {
+        font-size: 60px; 
+    }
+    
+    .planetas-animados-container {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 836px) {
+    .titulosPlanetas {
+        font-size: 40px; 
+    }
+}

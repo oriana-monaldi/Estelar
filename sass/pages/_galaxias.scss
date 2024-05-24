@@ -1,0 +1,93 @@
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-btn {
+    background-color: $color5;
+    color: $primaryColor;
+    padding: $defaultPx $default2;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+    font-family: $font2;
+    font-size: 19px;
+
+    position: relative;
+    &:after {
+        content: '\f078';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: bold;
+        position: absolute;
+        right: $defaultPx;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform 0.3s ease;
+    }
+}
+
+.accordion-content {
+    display: none;
+    padding: $defaultPx $default2;
+    background-color: $color5;    
+    margin-bottom: $default2;
+}
+
+.accordion-checkbox {
+    display: none;
+}
+
+.accordion-checkbox:checked + .accordion-btn + .accordion-content {
+    display: block;
+}
+
+.accordion-checkbox:checked + .accordion-btn:after {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.accordion-btn:hover,
+.accordion-checkbox:checked + .accordion-btn {
+    color: $color3;
+}
+
+//transiciones a las imagenes de galeria y galaxia 
+.image-container img {
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+/////////////////media quiery para que el acordeón responsive
+@media (max-width: 768px) {
+    .accordion {
+        max-width: 100%;
+        padding: 0 $defaultPx;
+    }
+
+    .accordion-btn {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    .accordion-content {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .accordion-btn {
+        font-size: 14px;
+        padding: 6px $defaultPx;
+    }
+
+    .accordion-content {
+        font-size: 12px;
+        padding: 6px $defaultPx;
+    }
+}

@@ -1,0 +1,89 @@
+footer {
+    background-color: $color2;
+    padding: $default2 ;
+    color: $primaryColor;
+    font-family: $font2;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+
+            a {
+                color: $primaryColor;
+                font-size: 24px;
+                margin-right: $default2;
+                transition: transform 0.3s ease, color 0.3s ease;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+                ///facebook///
+                &.facebook:hover {
+                    color: $color3;
+                }
+                ///instagram///
+                 &.instagram:hover {
+                    color: $color6;
+                }
+                ///youtube///
+                &.youtube:hover {
+                    color: $color8;
+                }
+                 ///youtube///
+                &.twitter:hover {
+                    color: $color9; 
+                }
+            }
+        }
+
+        .footer-right {
+            a {
+                color: $primaryColor;
+                margin-left: $default2;
+                text-decoration: none;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+/////////////////media quiery//////////////////////
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+
+        .footer-left {
+            margin-bottom: $default2;
+
+            a {
+                margin-right: 0;
+                margin-bottom: $defaultPx;
+            }
+        }
+
+        .footer-right {
+            a {
+                margin-left: 0;
+                margin-bottom: $defaultPx;
+                font-size: 12px;
+            }
+        }
+    }
+}

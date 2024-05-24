@@ -1,0 +1,61 @@
+//parallax del sol
+.parallaxSol {
+    height: 450px;
+    background-image: url('../../assets/sol/sol1.webp'); 
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom:  $default2;
+    background-position: center bottom; 
+    position: relative;
+    overflow: hidden;
+    
+    .parallax-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-80%, -100%);
+        text-align: center;
+        color: $primaryColor;
+        text-shadow: 2px 2px 4px $color7;
+        h1 {
+            font-size: 60px;
+            margin: 0;
+            font-family: $font4;
+        }
+    }
+}
+.subt{
+    margin-bottom: 20px;
+    animation: breathe 2s ease infinite alternate; 
+}
+
+@keyframes breathe {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.09);
+    }
+}
+
+
+/////////////////media quiery//////////////////////
+@media only screen and (max-width: 1600px) {
+    .parallaxSol {
+        height: 500px;
+
+        .parallax-content h2 {
+            font-size: $default3;
+        }
+    }
+}
+
+@media only screen and (max-width: $vMedia) {
+    .parallaxSol {
+        height: 400px;
+
+        .parallax-content h2 {
+            font-size: 40px;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 8px solid $primaryColor;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.568);
+    .form-group {
+        margin-bottom: 1rem;
+    }
+}
+
+label {
+    display: block;
+    color: $primaryColor;
+    font-size: 18px;
+}
+
+textarea {
+    height: 150px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid $color2;
+    border-radius: 5px;
+}
+.textoCard {
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.558);
+}
+button {
+    background-color: $color3;
+    color: $primaryColor;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    button:hover {
+        background-color: $color2;
+    }
+}
+/////////////////media quiery//////////////////////
+@media only screen and (max-width: 660px) {
+    .form {
+        max-width: 250px;
+        width: 80%; 
+        margin: 0 auto;
+    }
+}
+
