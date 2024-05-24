@@ -1,5 +1,12 @@
-// Estilos generales de la página 
-.titulosPlanetas {
+//titulos de las subpaginas de los planetas 
+h1 {
+    color: $primaryColor;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 60px;
+    font-family: $font2;
+}
+.titulosPlanetias {
     margin: 40px;
     color: $primaryColor;
     text-align: center;
