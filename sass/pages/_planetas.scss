@@ -52,65 +52,63 @@ $planetas: mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno;
 
 ///////////////////
 /// 
-/// 
-/// 
-/// 
 .contenedor-general {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
-
-.grid-container {
-    margin-bottom: 20px; 
-}
-
+  
 .grid-container {
     display: grid;
     color: $primaryColor;
-    grid-template-columns: repeat(4fr, auto);
-    grid-template-rows: repeat(2fr, auto);
-    grid-template-areas: 
-      "foto titulo titulo"
-      "descubrimiento expediciones orbita" ;
-    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-areas:
+    "foto titulo titulo"
+    "descubrimiento descubrimiento orbita"
+    "expediciones expediciones orbita";
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid $primaryColor;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px $color2;
+    background: $primaryColor;
+    width: 100%; 
+    margin-bottom: 20px; 
+  
     h2 {
-        text-align: center;
-        font-family: $font2;
-        font-size: 50px;
+      text-align: center;
+      font-family: $font2;
+      font-size: 50px;
     }
+    
     h3 {
-        text-align: center;
-        font-family: $font3;
+      text-align: center;
+      font-family: $font3;
     }
+    
     p {
-        font-family: $font3;
+      font-family: $font3;
     }
-
-  }
-  .img-tamaño {
-    max-width: 300px; 
-    max-height: 300px;
-  }
-
+}
+  
+.foto {
+    width: 400px;
+    height: 600px;
+}
   .titulo {
     grid-area: titulo;
   }
   
   .descubrimiento {
     grid-area: descubrimiento;
-    width: 400px;
-
   }
   
   .expediciones {
     grid-area: expediciones;
-    width: 400px;
-
   }
   
   .orbita {
     grid-area: orbita;
-    width: 400px;
-
   }
   
