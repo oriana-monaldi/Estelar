@@ -18,8 +18,15 @@
     min-height: 300px;
     h2 {
         color: $primaryColor;
+        background-color: rgba(0, 0, 0, 0.244); 
+        font-family: $font3;
     }
 }
+
+.tarjeta:hover {
+    filter: brightness(1.2);
+}
+
 $planetas: mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno;
 
 @for $i from 1 through length($planetas) {
@@ -32,7 +39,7 @@ $planetas: mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno;
     }
 }
 
-///////////////////
+////////////////////////////////////////
 
 .contenedor-general {
     display: flex;
@@ -42,10 +49,11 @@ $planetas: mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno;
 }
   
 .grid-container {
-    margin: 30px;
+    margin: 50px;
     border-radius: 10px;
     box-shadow: 3px 0px 10px 0px #ffffff2e;
     display: grid;
+    grid-gap: 40px !important;
     color: $primaryColor;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, auto);
@@ -54,19 +62,42 @@ $planetas: mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno;
         "descubrimiento expediciones orbita";
     grid-gap: 10px;
 }
-  
+
 .foto {
-    width: 400px;
-    height: 300px;
+    grid-area: foto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
+
+.foto:hover {
+    transform: scale(1.1);
+}
+
 .titulo {
     grid-area: titulo;
     justify-content: center;
     text-align: center;
+    font-size: 80px;
+    margin: 20px;
+    font-family: $font2;
 }
-  
+
 .descubrimiento {
     grid-area: descubrimiento;
+}
+
+.estiloPlanet {
+    h3 {
+        font-size: 30px;
+        font-family: $font2;
+    }
+    p {
+        font-size:18px;
+        font-family: $font3;
+    }
 }
 
 .expediciones {
@@ -75,4 +106,65 @@ $planetas: mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno;
   
 .orbita {
     grid-area: orbita;
+}
+
+@media (max-width: 1100px) {
+    .contenedor-planetas {
+        grid-template-columns: repeat(1, 500px);     
+    }
+    .tarjeta {
+        h2 {
+            font-size: 28px;
+        }
+    }
+    .grid-container {
+        grid-template-columns: repeat(2, auto);
+        grid-template-areas:
+            "foto titulo"
+            "descubrimiento expediciones"
+            "orbita orbita";
+    }
+    .titulo {
+        font-size: 50px;
+    }
+    .estiloPlanet {
+        h3 {
+            font-size: 20px;
+        }
+        p {
+            font-size:16px;
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .contenedor-planetas {
+        grid-template-columns: repeat(1, 280px);     
+    }
+    .tarjeta {
+        h2 {
+            font-size: 18px;
+        }
+    }
+    .grid-container {
+        grid-template-columns: repeat(1, auto);
+        grid-template-areas:
+           "titulo"
+           "foto" 
+            "descubrimiento" 
+            "expediciones"
+            "orbita"
+            "orbita";
+    }
+    .titulo {
+        font-size: 40px;
+    }
+    .estiloPlanet {
+        h3 {
+            font-size: 20px;
+        }
+        p {
+            font-size:14px;
+        }
+    }
 }

@@ -24,15 +24,10 @@ h1 {
     .TituloPrincipal {
         font-size: 60px;
     }
-    
-    .info-card-container {
-        h2 {
-            font-size: 10px;
-        }
-        
-        p {
-            font-size: 15px; 
-        }
-    }
 }
 
+@media (max-width: 450px) {
+    .TituloPrincipal {
+        font-size: 40px;
+    }
+}

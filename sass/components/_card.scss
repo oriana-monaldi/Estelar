@@ -16,7 +16,7 @@
     align-items: center;
     flex-direction: column;
     width: 50%;
-    margin-bottom: 50px;
+    margin: 50px 10px;
     
     h2 {
         text-align: center;
@@ -24,7 +24,7 @@
         margin-right: 10px;
         font-size: 60px;
         font-family: $font2;
-        text-shadow: 2px solid $color2;
+        text-shadow: 10px 2px 2px rgba(0, 0, 0, 0.5);
     }
     
     p {
@@ -37,7 +37,6 @@
         text-decoration: none;
     }
 }
-
 
 .card-planeta-button {
     padding: 1em 2em;
@@ -78,7 +77,7 @@
 .card-planeta-button:hover::before {
     width: 250%;
 }
-  
+//imagenes dentro de las cards de pagina planetas
 $planetasNombres: rocketnasa, salidacohete, img10, estacionEsp, lanzamiento ;
 
 @for $i from 1 through length($planetasNombres) {
@@ -90,4 +89,27 @@ $planetasNombres: rocketnasa, salidacohete, img10, estacionEsp, lanzamiento ;
         background-image: url('../../assets/#{$planetaNombre}.webp');
     }
 }
+/////////////////media quiery//////////////////////
+@media (max-width: 780px) {
+    .info-card-container {
+        h2 {
+            font-size: 40px;
+        }
+        
+        p {
+            font-size: 20px; 
+        }
+    }
 
+}
+@media (max-width: 450px) {
+    .info-card-container {
+        h2 {
+            font-size: 30px;
+        }
+        
+        p {
+            font-size: 15px; 
+        }
+    }
+}

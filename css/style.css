@@ -46,11 +46,10 @@ h1 {
   .TituloPrincipal {
     font-size: 60px;
   }
-  .info-card-container h2 {
-    font-size: 10px;
-  }
-  .info-card-container p {
-    font-size: 15px;
+}
+@media (max-width: 450px) {
+  .TituloPrincipal {
+    font-size: 40px;
   }
 }
 .navbar {
@@ -171,7 +170,7 @@ footer .container .footer-right a:hover {
   align-items: center;
   flex-direction: column;
   width: 50%;
-  margin-bottom: 50px;
+  margin: 50px 10px;
 }
 .info-card-container h2 {
   text-align: center;
@@ -179,7 +178,7 @@ footer .container .footer-right a:hover {
   margin-right: 10px;
   font-size: 60px;
   font-family: Mono;
-  text-shadow: 2px solid rgb(0, 0, 0);
+  text-shadow: 10px 2px 2px rgba(0, 0, 0, 0.5);
 }
 .info-card-container p {
   color: rgb(255, 255, 255);
@@ -251,6 +250,22 @@ footer .container .footer-right a:hover {
   background-image: url("../../assets/lanzamiento.webp");
 }
 
+@media (max-width: 780px) {
+  .info-card-container h2 {
+    font-size: 40px;
+  }
+  .info-card-container p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .info-card-container h2 {
+    font-size: 30px;
+  }
+  .info-card-container p {
+    font-size: 15px;
+  }
+}
 .btn {
   --color: #ffffff;
   padding: 10px;
@@ -312,12 +327,12 @@ footer .container .footer-right a:hover {
 
 .scroll {
   position: fixed;
-  right: 20px;
+  right: 40px;
   bottom: 20px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: rgb(20, 20, 20);
+  background-color: rgb(0, 0, 0);
   border: none;
   font-weight: 600;
   display: flex;
@@ -336,14 +351,14 @@ footer .container .footer-right a:hover {
 }
 
 .svgIcon path {
-  fill: white;
+  fill: rgb(255, 255, 255);
 }
 
 .scroll:hover {
   width: 140px;
   border-radius: 50px;
   transition-duration: 0.3s;
-  background-color: rgb(181, 160, 255);
+  background-color: rgb(81, 53, 182);
   align-items: center;
 }
 
@@ -356,7 +371,7 @@ footer .container .footer-right a:hover {
   position: absolute;
   bottom: -20px;
   content: "Back to Top";
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 0px;
 }
 
@@ -550,8 +565,8 @@ button button:hover {
   flex-direction: column;
   align-items: center;
   font-family: Mono;
-  background-color: rgba(0, 0, 0, 0.5);
-  animation: fadeInUp 0.8s ease forwards;
+  background-color: rgba(0, 0, 0, 0.32);
+  animation: float 3s ease-in-out infinite;
 }
 .text h2 {
   margin-top: 20px;
@@ -565,13 +580,14 @@ button button:hover {
   margin: 20px;
 }
 
-@keyframes fadeInUp {
+@keyframes float {
   0% {
-    opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
   100% {
-    opacity: 1;
     transform: translateY(0);
   }
 }
@@ -672,6 +688,12 @@ button button:hover {
 }
 .tarjeta h2 {
   color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.244);
+  font-family: Roboto;
+}
+
+.tarjeta:hover {
+  filter: brightness(1.2);
 }
 
 .tarjeta-mercurio {
@@ -738,10 +760,11 @@ button button:hover {
 }
 
 .grid-container {
-  margin: 30px;
+  margin: 50px;
   border-radius: 10px;
   box-shadow: 3px 0px 10px 0px rgba(255, 255, 255, 0.1803921569);
   display: grid;
+  grid-gap: 40px !important;
   color: rgb(255, 255, 255);
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, auto);
@@ -750,18 +773,38 @@ button button:hover {
 }
 
 .foto {
-  width: 400px;
-  height: 300px;
+  grid-area: foto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.foto:hover {
+  transform: scale(1.1);
 }
 
 .titulo {
   grid-area: titulo;
   justify-content: center;
   text-align: center;
+  font-size: 80px;
+  margin: 20px;
+  font-family: Mono;
 }
 
 .descubrimiento {
   grid-area: descubrimiento;
+}
+
+.estiloPlanet h3 {
+  font-size: 30px;
+  font-family: Mono;
+}
+.estiloPlanet p {
+  font-size: 18px;
+  font-family: Roboto;
 }
 
 .expediciones {
@@ -772,6 +815,48 @@ button button:hover {
   grid-area: orbita;
 }
 
+@media (max-width: 1100px) {
+  .contenedor-planetas {
+    grid-template-columns: repeat(1, 500px);
+  }
+  .tarjeta h2 {
+    font-size: 28px;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas: "foto titulo" "descubrimiento expediciones" "orbita orbita";
+  }
+  .titulo {
+    font-size: 50px;
+  }
+  .estiloPlanet h3 {
+    font-size: 20px;
+  }
+  .estiloPlanet p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 560px) {
+  .contenedor-planetas {
+    grid-template-columns: repeat(1, 280px);
+  }
+  .tarjeta h2 {
+    font-size: 18px;
+  }
+  .grid-container {
+    grid-template-columns: repeat(1, auto);
+    grid-template-areas: "titulo" "foto" "descubrimiento" "expediciones" "orbita" "orbita";
+  }
+  .titulo {
+    font-size: 40px;
+  }
+  .estiloPlanet h3 {
+    font-size: 20px;
+  }
+  .estiloPlanet p {
+    font-size: 14px;
+  }
+}
 .accordion {
   max-width: 800px;
   margin: 20px auto;
