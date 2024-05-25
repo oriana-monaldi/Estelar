@@ -1,8 +1,8 @@
 .contact{ 
     height: 100vh;
     font-family: $font3;
-    color: $primaryColor;
-    margin-top: 20px;
+    color: $c0;
+    margin-top: $default2;
     text-align: center;
 
     h1{
@@ -10,15 +10,15 @@
         font-family: $font2;
     }
     p {
-        font-size: 20px;
+        font-size: $default2;
     }
 }
 form {
     max-width: 400px;
     margin: 0 auto;
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 8px solid $primaryColor;
+    margin-bottom: $default2;
+    padding: $default2;
+    border: 8px solid $c0;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.568);
     .form-group {
@@ -28,7 +28,7 @@ form {
 
 label {
     display: block;
-    color: $primaryColor;
+    color: $c0;
     font-size: 18px;
 }
 
@@ -41,22 +41,22 @@ input[type="email"],
 textarea {
     width: 100%;
     padding: 0.5rem;
-    border: 2px solid $color2;
+    border: 2px solid $c5;
     border-radius: 5px;
 }
 .textoCard {
-    font-size: 20px;
+    font-size: $default2;
     background-color: rgba(0, 0, 0, 0.558);
 }
 button {
-    background-color: $color3;
-    color: $primaryColor;
+    background-color: $c3;
+    color: $c0;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     button:hover {
-        background-color: $color2;
+        background-color: $c5;
     }
 }
 /////////////////media quiery//////////////////////

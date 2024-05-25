@@ -12,10 +12,10 @@
         top: 50%;
         left: 5%;
         transform: translateY(-50%); 
-        color: $primaryColor; 
+        color: $c0; 
         font-size: 60px;
         font-family: $font2;
-        text-shadow: 10px 0px 10px rgb(0, 0, 0); 
+        text-shadow: $defaultPx 0px $defaultPx $c5; 
     }
 }
 ////// grid 
@@ -33,9 +33,9 @@
         "img3 text3"
         "text4 img4"
         "img5 text5";
-    gap: 20px;
+    gap: $default2;
     padding: 40px;
-    margin-bottom: 50px;
+    margin-bottom: $default3;
 }
 .image {
     display: flex;
@@ -70,15 +70,15 @@
     background-color: rgba(0, 0, 0, 0.32);
     animation: float 3s ease-in-out infinite;
     h2 {
-        margin-top: 20px;
+        margin-top: $default2;
         font-size: 35px;
         font-family: $font2;
-        color: $primaryColor;
+        color: $c0;
     }
     p {
-        color:$primaryColor;
+        color:$c0;
         text-align: left;
-        margin: 20px;
+        margin: $default2;
     }
 
 }
@@ -87,7 +87,7 @@
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-$defaultPx);
     }
     100% {
         transform: translateY(0);
@@ -113,7 +113,7 @@
 @media (max-width: 1280px) {
     .contenedor {
         h1 {
-            font-size: 50px !important;
+            font-size: $default3 !important;
         }
     }
 }    
@@ -174,7 +174,7 @@
     .contenedor {
         height: auto; 
         h1 {
-            font-size: 20px !important;
+            font-size: $default2 !important;
             top: 40% !important;
         }
     }
@@ -186,7 +186,7 @@
 
     }
     .text h2 {
-        font-size: 20px;
+        font-size: $default2;
     }
     .text p {
         font-size: 15px;

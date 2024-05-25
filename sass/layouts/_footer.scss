@@ -1,7 +1,7 @@
 footer {
-    background-color: $color2;
+    background-color: $c5;
     padding: $default2 ;
-    color: $primaryColor;
+    color: $c0;
     font-family: $font2;
 
     .container {
@@ -15,7 +15,7 @@ footer {
             align-items: center;
 
             a {
-                color: $primaryColor;
+                color: $c0;
                 font-size: 24px;
                 margin-right: $default2;
                 transition: transform 0.3s ease, color 0.3s ease;
@@ -29,26 +29,26 @@ footer {
                 }
                 ///facebook///
                 &.facebook:hover {
-                    color: $color3;
+                    color: $c6;
                 }
                 ///instagram///
                  &.instagram:hover {
-                    color: $color6;
+                    color: $c7;
                 }
                 ///youtube///
                 &.youtube:hover {
-                    color: $color8;
+                    color: $c8;
                 }
                  ///youtube///
                 &.twitter:hover {
-                    color: $color9; 
+                    color: $c9; 
                 }
             }
         }
 
         .footer-right {
             a {
-                color: $primaryColor;
+                color: $c0;
                 margin-left: $default2;
                 text-decoration: none;
 

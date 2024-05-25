@@ -1,15 +1,15 @@
 /// Estilos para navbar 
 .navbar {
-    background-color: $color2;
+    background-color: $c5;
     font-family: $font2;
 
     .nav-link {
-        color: $primaryColor !important;
+        color: $c0 !important;
     }
 
     .custom-toggler {
-        border-color: $primaryColor;
-        color: $color7;
+        border-color: $c0;
+        color: $c7;
         z-index: 1000000000;
     }
 }

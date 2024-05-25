@@ -16,19 +16,19 @@
     align-items: center;
     flex-direction: column;
     width: 50%;
-    margin: 50px 10px;
+    margin: $default3 $defaultPx;
     
     h2 {
         text-align: center;
-        color: $primaryColor;
-        margin-right: 10px;
+        color: $c0;
+        margin-right: $defaultPx;
         font-size: 60px;
         font-family: $font2;
-        text-shadow: 10px 2px 2px rgba(0, 0, 0, 0.5);
+        text-shadow: $defaultPx 2px 2px $c4;
     }
     
     p {
-        color: $primaryColor;
+        color: $c0;
         text-align: center;
         font-family: $font3;
     }
@@ -55,7 +55,7 @@
 }
   
 .card-planeta-button:hover {
-    color: $primaryColor;
+    color: $c0;
     transform: scale(1);
     outline: 2px solid $c1;
     box-shadow: 4px 5px 17px -4px $c1;
@@ -64,7 +64,7 @@
 .card-planeta-button::before {
     content: "";
     position: absolute;
-    left: -50px;
+    left: -$default3;
     top: 0;
     width: 0;
     height: 100%;
@@ -97,10 +97,9 @@ $planetasNombres: rocketnasa, salidacohete, img10, estacionEsp, lanzamiento ;
         }
         
         p {
-            font-size: 20px; 
+            font-size: $default2; 
         }
     }
-
 }
 @media (max-width: 450px) {
     .info-card-container {
