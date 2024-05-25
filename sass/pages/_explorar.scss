@@ -15,7 +15,7 @@ iframe {
 }
 
 /* Media queries para hacer el iframe responsivo */
-@media (max-width: $default4) {
+@media (max-width: vMedia) {
     iframe {
         height: 600px;
     }

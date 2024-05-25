@@ -961,7 +961,7 @@ iframe {
 }
 
 /* Media queries para hacer el iframe responsivo */
-@media (max-width: 1200px) {
+@media (max-width: vMedia) {
   iframe {
     height: 600px;
   }
@@ -992,7 +992,7 @@ iframe {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   margin: 50px auto;
-  max-width: 1200px;
+  max-width: vMedia;
 }
 
 .image-container {
