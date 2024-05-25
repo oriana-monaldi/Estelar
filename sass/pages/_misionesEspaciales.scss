@@ -6,6 +6,7 @@
         height: 100%; 
         object-fit: cover;
         object-position: center; 
+
     }
     .titulosPlanetas {
         position: absolute; 
@@ -15,7 +16,7 @@
         color: $c0; 
         font-size: 60px;
         font-family: $font2;
-        text-shadow: $defaultPx 0px $defaultPx $c5; 
+        text-shadow: 2px 2px 2px black; 
     }
 }
 ////// grid 
@@ -93,8 +94,6 @@
         transform: translateY(0);
     }
 }
-
-
 
 ///////////////////////////////////////////
 //efecto hover de las imagenes 

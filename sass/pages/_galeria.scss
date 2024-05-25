@@ -5,7 +5,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: $default2;
     margin: $default3 auto;
-    max-width: vMedia;
+    max-width: $vMedia;
 }
 
 .image-container {
@@ -27,8 +27,8 @@
     }
 }
 
-/////////////////media quiery para hacer la galería responsiva
-@media (max-width: 1280px) {
+/////////////////media quiery///////////////////
+@media (max-width: 1000px) {
     .image-grid {
         grid-template-columns: repeat(3, 1fr);
     }
