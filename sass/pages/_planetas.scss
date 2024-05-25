@@ -1,23 +1,8 @@
-.contenedor {
-    .fotografia {
-        width: 100%;
-        height: calc(100vh - 56px);
-    }
-    .titulosPlanetas {
-        position: absolute; 
-        top: 50%;
-        left: 5%;
-        color: $primaryColor; 
-        font-size: 60px;
-        font-family: $font2;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-    }
-}
 
 /////////////////////////////////////////////////////
 .contenedor-planetas {
     display: grid;
-    grid-template-columns: repeat(2, 400px);     
+    grid-template-columns: repeat(2, 500px);     
     display: grid;
     padding: 20px;
     gap: 40px;
@@ -32,12 +17,9 @@
     overflow: hidden;
     min-height: 300px;
     h2 {
-        background-color: rgba(30, 22, 22, 0.261);
-        color:rgb(255, 255, 255);
-
+        color: $primaryColor;
     }
 }
-
 $planetas: mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno;
 
 @for $i from 1 through length($planetas) {
@@ -51,7 +33,7 @@ $planetas: mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno;
 }
 
 ///////////////////
-/// 
+
 .contenedor-general {
     display: flex;
     flex-direction: column;
@@ -60,55 +42,37 @@ $planetas: mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno;
 }
   
 .grid-container {
+    margin: 30px;
+    border-radius: 10px;
+    box-shadow: 3px 0px 10px 0px #ffffff2e;
     display: grid;
     color: $primaryColor;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
     grid-template-areas:
-    "foto titulo titulo"
-    "descubrimiento descubrimiento orbita"
-    "expediciones expediciones orbita";
-    gap: 10px;
-    padding: 20px;
-    border: 1px solid $primaryColor;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px $color2;
-    background: $primaryColor;
-    width: 100%; 
-    margin-bottom: 20px; 
-  
-    h2 {
-      text-align: center;
-      font-family: $font2;
-      font-size: 50px;
-    }
-    
-    h3 {
-      text-align: center;
-      font-family: $font3;
-    }
-    
-    p {
-      font-family: $font3;
-    }
+        "foto titulo titulo"
+        "descubrimiento expediciones orbita";
+    grid-gap: 10px;
 }
   
 .foto {
     width: 400px;
-    height: 600px;
+    height: 300px;
 }
-  .titulo {
+.titulo {
     grid-area: titulo;
-  }
+    justify-content: center;
+    text-align: center;
+}
   
-  .descubrimiento {
+.descubrimiento {
     grid-area: descubrimiento;
-  }
-  
-  .expediciones {
+}
+
+.expediciones {
     grid-area: expediciones;
-  }
+}
   
-  .orbita {
+.orbita {
     grid-area: orbita;
-  }
-  
+}

@@ -17,6 +17,7 @@
     flex-direction: column;
     width: 50%;
     margin-bottom: 50px;
+    
     h2 {
         text-align: center;
         color: $primaryColor;
@@ -25,15 +26,18 @@
         font-family: $font2;
         text-shadow: 2px solid $color2;
     }
+    
     p {
         color: $primaryColor;
         text-align: center;
         font-family: $font3;
     }
-   a {
-    text-decoration: none;
-   }
+    
+    a {
+        text-decoration: none;
+    }
 }
+
 
 .card-planeta-button {
     padding: 1em 2em;

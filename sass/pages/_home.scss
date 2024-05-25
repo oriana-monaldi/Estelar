@@ -19,22 +19,20 @@ h1 {
     font-family: $font4;
 }
 
-
 /////////////////media quiery//////////////////////
-
-@media only screen and (max-width: 1450px) {
-  
-    .titulosPlanetas {
-        font-size: 60px; 
+@media (max-width: 780px) {
+    .TituloPrincipal {
+        font-size: 60px;
     }
     
-    .planetas-animados-container {
-        display: none;
+    .info-card-container {
+        h2 {
+            font-size: 10px;
+        }
+        
+        p {
+            font-size: 15px; 
+        }
     }
 }
 
-@media only screen and (max-width: 836px) {
-    .titulosPlanetas {
-        font-size: 40px; 
-    }
-}

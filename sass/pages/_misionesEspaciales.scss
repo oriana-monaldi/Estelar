@@ -1,7 +1,30 @@
+.contenedor {
+    position: relative; 
+    height: calc(100vh - 56px); 
+    .fotografia {
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover;
+        object-position: center; 
+    }
+    .titulosPlanetas {
+        position: absolute; 
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%); 
+        color: $primaryColor; 
+        font-size: 60px;
+        font-family: $font2;
+        text-shadow: 10px 0px 10px rgb(0, 0, 0); 
+    }
+}
 ////// grid 
 .moon-grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: repeat(1fr, auto); 
+    gap: $default2;
+    justify-items: center;
+    align-items: center;
     grid-template-rows: repeat(5, auto);
     justify-items: center;
     grid-template-areas: 
@@ -39,7 +62,7 @@
     display: flex;
     text-align: center;
     width: 500px;
-    padding: 40px;
+    padding: 25px;
     font-size:$default2;
     flex-direction: column;
     align-items: center;
@@ -83,21 +106,22 @@
     transform: scale(1.1); 
 }
 
-
-
-
-
-
 /////////////////media quiery//////////////////////
-
-@media (max-width: 1170px) {
-   
+@media (max-width: 1280px) {
+    .contenedor {
+        h1 {
+            font-size: 50px !important;
+        }
+    }
+}    
+@media (max-width: 1080px) {
+    .contenedor {
+        h1 {
+            font-size: 40px !important;
+        }
+    }
     .moon-grid-container {
-        display: grid;
-        grid-template-columns: 1fr; 
-        gap: $default2;
-        justify-items: center;
-        align-items: center;
+        grid-template-columns: repeat(1fr, auto); 
         grid-template-rows: repeat(10, auto);
         grid-template-areas: 
             "img1"
@@ -110,22 +134,61 @@
             "text4"
             "img5" 
             "text5";
-    }   
+    }
+    .image{
+        width: 60%; 
+    }
+    .text h2 {
+        font-size: 30px;
+    }
+    .text p {
+        font-size: 18px;
+    }
+  
 }
 
-@media (max-width: 590px) {
-
+@media (max-width: 800px) {
+    .contenedor {
+        height: auto; 
+        h1 {
+            font-size: 30px !important;
+            top: 20%;
+        }
+    }
+    .fotografia {
+        height: auto;
+    }
     
-    .moon-grid-container {
-        .image{
-            width: 80%; 
-            }
-        .text h2 {
-            font-size: 20px;
-        }
-        .text p {
-            font-size: 14px;
-        }
+    .titulosPlanetas {
+        font-size: 40px; 
+    }
+    .text{ 
+        width: 400px;
     }
 }
 
+@media (max-width: 490px) {
+    .contenedor {
+        height: auto; 
+        h1 {
+            font-size: 20px !important;
+            top: 40% !important;
+        }
+    }
+    .fotografia {
+        width: 60%; 
+    }
+    .text{ 
+        width: 300px;
+
+    }
+    .text h2 {
+        font-size: 20px;
+    }
+    .text p {
+        font-size: 15px;
+    }
+    .moon-grid-container {
+        padding: 5px ;
+    }
+}
