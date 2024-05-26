@@ -230,23 +230,23 @@ footer .container .footer-right a:hover {
 
 .cardPlaneta:nth-child(1) {
   height: calc(100vh - 56px);
-  background-image: url("../../assets/rocketNasa.webp");
+  background-image: url("../assets/rocketNasa.webp");
 }
 
 .cardPlaneta:nth-child(2) {
-  background-image: url("../../assets/salidaCohete.webp");
+  background-image: url("../assets/salidaCohete.webp");
 }
 
 .cardPlaneta:nth-child(3) {
-  background-image: url("../../assets/img10.webp");
+  background-image: url("../assets/img10.webp");
 }
 
 .cardPlaneta:nth-child(4) {
-  background-image: url("../../assets/estacionEsp.webp");
+  background-image: url("../assets/estacionEsp.webp");
 }
 
 .cardPlaneta:nth-child(5) {
-  background-image: url("../../assets/lanzamiento.webp");
+  background-image: url("../assets/lanzamiento.webp");
 }
 
 @media (max-width: 780px) {

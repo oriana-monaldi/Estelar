@@ -89,7 +89,7 @@ $planetasNombres: rocketNasa, salidaCohete, img10, estacionEsp, lanzamiento ;
         @if ($i == 1)  {
             height: calc(100vh - 56px);
         }
-        background-image: url('../../assets/#{$planetaNombre}.webp');
+        background-image: url('../assets/#{$planetaNombre}.webp');
     }
 }
 /////////////////media quiery//////////////////////
