@@ -32,7 +32,7 @@ $planetas: mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno;
 @for $i from 1 through length($planetas) {
     $planeta: nth($planetas, $i);
     .tarjeta-#{$planeta} {
-        background-image: url('../../assets/sistemaSolar/#{$planeta}.webp');
+        background-image: url('assets/sistemaSolar/#{$planeta}.webp');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
