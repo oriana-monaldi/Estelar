@@ -168,14 +168,14 @@
 
   .btn::before,
   .btn::after {
-    width: 10px !important; 
-    height: 10px  !important;  
+    width: $defaultPx !important; 
+    height: $defaultPx  !important;  
   }
 
   .btn:hover::before,
   .btn:hover::after {
-    width: 10px  !important;
-    height: 10px  !important;
+    width: $defaultPx  !important;
+    height: $defaultPx  !important;
   }
 
 }

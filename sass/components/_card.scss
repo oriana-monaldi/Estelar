@@ -22,7 +22,7 @@
         text-align: center;
         color: $c0;
         margin-right: $defaultPx;
-        font-size: 60px;
+        font-size: $default4;
         font-family: $font2;
         text-shadow: 2px 2px 2px black; 
     }
@@ -32,7 +32,7 @@
         text-align: center;
         font-family: $font3;
         text-shadow: 2px 2px 2px black; 
-        font-size: 20px; 
+        font-size: $default2; 
 
     }
     
@@ -89,7 +89,7 @@ $planetasNombres: rocketNasa, salidaCohete, img10, estacionEsp, lanzamiento ;
         @if ($i == 1)  {
             height: calc(100vh - 56px);
         }
-        background-image: url('../assets/#{$planetaNombre}.webp');
+        background-image: url('../assets/home/#{$planetaNombre}.webp');
     }
 }
 /////////////////media quiery//////////////////////

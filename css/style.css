@@ -8,6 +8,13 @@
 main {
   max-width: 100%;
   overflow-x: hidden;
+  flex-grow: 1;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 @font-face {
@@ -85,12 +92,14 @@ footer {
   background-color: rgb(0, 0, 0);
   padding: 5px;
   color: rgb(255, 255, 255);
+  text-align: center;
   font-family: Mono;
 }
 footer .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: auto;
   margin-bottom: 30px;
 }
 footer .container .footer-left {
@@ -231,23 +240,23 @@ footer .container .footer-right a:hover {
 
 .cardPlaneta:nth-child(1) {
   height: calc(100vh - 56px);
-  background-image: url("../assets/rocketNasa.webp");
+  background-image: url("../assets/home/rocketNasa.webp");
 }
 
 .cardPlaneta:nth-child(2) {
-  background-image: url("../assets/salidaCohete.webp");
+  background-image: url("../assets/home/salidaCohete.webp");
 }
 
 .cardPlaneta:nth-child(3) {
-  background-image: url("../assets/img10.webp");
+  background-image: url("../assets/home/img10.webp");
 }
 
 .cardPlaneta:nth-child(4) {
-  background-image: url("../assets/estacionEsp.webp");
+  background-image: url("../assets/home/estacionEsp.webp");
 }
 
 .cardPlaneta:nth-child(5) {
-  background-image: url("../assets/lanzamiento.webp");
+  background-image: url("../assets/home/lanzamiento.webp");
 }
 
 @media (max-width: 780px) {
@@ -460,7 +469,7 @@ form {
   padding: 20px;
   border: 3px solid rgb(255, 255, 255);
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.568);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 form .form-group {
   margin-bottom: 1rem;
@@ -487,7 +496,7 @@ textarea {
 
 .textoCard {
   font-size: 20px;
-  background-color: rgba(0, 0, 0, 0.558);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 @media only screen and (max-width: 660px) {
@@ -910,7 +919,7 @@ textarea {
 }
 
 .accordion-btn {
-  background-color: #333;
+  background-color: #1d1c1c;
   color: rgb(255, 255, 255);
   padding: 10px 20px;
   border: none;
@@ -935,7 +944,7 @@ textarea {
 .accordion-content {
   display: none;
   padding: 10px 20px;
-  background-color: #333;
+  background-color: #1d1c1c;
   margin-bottom: 20px;
 }
 
