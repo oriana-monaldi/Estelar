@@ -50,7 +50,7 @@ $planetas: mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno;
   
 .grid-container {
     margin: $default3;
-    border-radius: $defaultPx;
+    border-radius: 10px;
     box-shadow: 3px 0px $defaultPx 0px #ffffff2e;
     display: grid;
     grid-gap: 40px !important;
@@ -61,6 +61,7 @@ $planetas: mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno;
         "foto titulo titulo"
         "descubrimiento expediciones orbita";
     grid-gap: $defaultPx;
+    overflow: hidden;
 }
 
 .foto {
@@ -114,7 +115,7 @@ $planetas: mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno;
     }
     .tarjeta {
         h2 {
-            font-size: 28px;
+            font-size: 30px;
         }
     }
     .grid-container {
@@ -143,7 +144,7 @@ $planetas: mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno;
     }
     .tarjeta {
         h2 {
-            font-size: 18px;
+            font-size: 25px;
         }
     }
     .grid-container {

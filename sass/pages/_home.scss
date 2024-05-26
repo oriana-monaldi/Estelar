@@ -3,7 +3,7 @@ h1 {
     color: $c0;
     margin-top: 40px;
     text-align: center;
-    font-size: 60px;
+    font-size: $default4;
     font-family: $font2;
     text-shadow: 2px 2px 2px black; 
 
@@ -24,7 +24,7 @@ h1 {
 /////////////////media quiery//////////////////////
 @media (max-width: 780px) {
     .TituloPrincipal {
-        font-size: 60px;
+        font-size: $default4;
     }
 }
 

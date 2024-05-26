@@ -14,7 +14,7 @@
         left: 5%;
         transform: translateY(-50%); 
         color: $c0; 
-        font-size: 60px;
+        font-size: $default4;
         font-family: $font2;
         text-shadow: 2px 2px 2px black; 
     }
@@ -191,6 +191,6 @@
         font-size: 15px;
     }
     .moon-grid-container {
-        padding: 5px ;
+        padding: 10px ;
     }
 }

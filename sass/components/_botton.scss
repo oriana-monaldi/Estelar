@@ -31,7 +31,7 @@
   position: absolute;
   border-radius: 50%;
   z-index: -1;
-  background-color:  $c0;
+  background-color: $c0;
   transition: 1s ease;
 }
 
@@ -136,7 +136,10 @@
     border-radius: 50%;
     text-decoration: none;
 }
-
+.fa-whatsapp {
+  color: black;
+  font-size: 40px;
+}
 
 @media (max-width: 500px) {
   .btn {

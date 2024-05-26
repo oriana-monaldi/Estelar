@@ -1,11 +1,10 @@
-
-
 .image-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: $default2;
-    margin: $default3 auto;
+    gap: 16px; 
+    margin: 24px auto; 
     max-width: $vMedia;
+    padding: 0 20px; 
 }
 
 .image-container {
@@ -14,7 +13,7 @@
     padding-top: 100%; 
     position: relative;
     overflow: hidden;
-    border-radius: $defaultPx;
+    border-radius: 8px;
 
     img {
         position: absolute;
@@ -23,7 +22,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover; 
-        border-radius: $defaultPx;
+        border-radius: 8px;
     }
 }
 
