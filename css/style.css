@@ -209,6 +209,7 @@ footer .container .footer-right a:hover {
   color: #2c9caf;
   transition: all 1000ms;
   font-size: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
   position: relative;
   overflow: hidden;
   outline: 2px solid #2c9caf;
@@ -525,7 +526,7 @@ textarea {
   left: 5%;
   transform: translateY(-50%);
   color: rgb(255, 255, 255);
-  font-size: 60px;
+  font-size: 80px;
   font-family: Mono;
   text-shadow: 2px 2px 2px black;
 }
@@ -666,31 +667,17 @@ textarea {
   }
 }
 @media (max-width: 800px) {
-  .contenedor {
-    height: auto;
-  }
-  .contenedor h1 {
-    font-size: 30px !important;
-    top: 20%;
-  }
   .fotografia {
     height: auto;
   }
   .titulosPlanetas {
-    font-size: 40px;
+    font-size: 50px;
   }
   .text {
     width: 400px;
   }
 }
 @media (max-width: 490px) {
-  .contenedor {
-    height: auto;
-  }
-  .contenedor h1 {
-    font-size: 20px !important;
-    top: 40% !important;
-  }
   .fotografia {
     width: 60%;
   }
@@ -704,7 +691,7 @@ textarea {
     font-size: 15px;
   }
   .moon-grid-container {
-    padding: 10px;
+    padding: 5px;
   }
 }
 .contenedor-planetas {
@@ -729,10 +716,6 @@ textarea {
   color: rgb(255, 255, 255);
   text-shadow: 2px 2px 2px black;
   font-family: Roboto;
-}
-
-.tarjeta:hover {
-  filter: brightness(1.2);
 }
 
 .tarjeta-mercurio {
@@ -805,7 +788,7 @@ textarea {
   display: grid;
   grid-gap: 40px !important;
   color: rgb(255, 255, 255);
-  background-color: rgba(10, 10, 10, 0.436);
+  background-color: rgba(10, 10, 10, 0.737);
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, auto);
   grid-template-areas: "foto titulo titulo" "descubrimiento expediciones orbita";

@@ -23,10 +23,6 @@
     }
 }
 
-.tarjeta:hover {
-    filter: brightness(1.2);
-}
-
 $planetas: mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno;
 
 @for $i from 1 through length($planetas) {
@@ -55,7 +51,7 @@ $planetas: mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno;
     display: grid;
     grid-gap: 40px !important;
     color: $c0;
-    background-color: rgba(10, 10, 10, 0.436);
+    background-color: rgba(10, 10, 10, 0.737);
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, auto);
     grid-template-areas:

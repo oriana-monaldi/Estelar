@@ -14,7 +14,7 @@
         left: 5%;
         transform: translateY(-50%); 
         color: $c0; 
-        font-size: $default4;
+        font-size: 80px;
         font-family: $font2;
         text-shadow: 2px 2px 2px black; 
     }
@@ -150,19 +150,12 @@
 }
 
 @media (max-width: 800px) {
-    .contenedor {
-        height: auto; 
-        h1 {
-            font-size: 30px !important;
-            top: 20%;
-        }
-    }
     .fotografia {
         height: auto;
     }
     
     .titulosPlanetas {
-        font-size: 40px; 
+        font-size: 50px; 
     }
     .text{ 
         width: 400px;
@@ -170,19 +163,12 @@
 }
 
 @media (max-width: 490px) {
-    .contenedor {
-        height: auto; 
-        h1 {
-            font-size: $default2 !important;
-            top: 40% !important;
-        }
-    }
+   
     .fotografia {
         width: 60%; 
     }
     .text{ 
         width: 300px;
-
     }
     .text h2 {
         font-size: $default2;
@@ -191,6 +177,6 @@
         font-size: 15px;
     }
     .moon-grid-container {
-        padding: $defaultPx ;
+        padding: 5px ;
     }
 }
