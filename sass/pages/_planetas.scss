@@ -55,6 +55,7 @@ $planetas: mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno;
     display: grid;
     grid-gap: 40px !important;
     color: $c0;
+    background-color: rgba(10, 10, 10, 0.436);
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, auto);
     grid-template-areas:
@@ -69,12 +70,16 @@ $planetas: mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: $defaultPx;
     transition: transform 0.3s ease-in-out;
 }
 
 .foto:hover {
     transform: scale(1.1);
+}
+
+.foto-contenedor {
+    width: 450px;
+    height: 300px;
 }
 
 .titulo {
@@ -109,13 +114,13 @@ $planetas: mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno;
     grid-area: orbita;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1350px) {
     .contenedor-planetas {
         grid-template-columns: repeat(1, 500px);     
     }
     .tarjeta {
         h2 {
-            font-size: 30px;
+            font-size: 35px;
         }
     }
     .grid-container {
@@ -126,19 +131,18 @@ $planetas: mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno;
             "orbita orbita";
     }
     .titulo {
-        font-size: $default3;
+        font-size: 60px;
     }
     .estiloPlanet {
         h3 {
-            font-size: $default2;
+            font-size: 40px;
         }
         p {
-            font-size:16px;
+            font-size:20px;
         }
     }
 }
-
-@media (max-width: 560px) {
+@media (max-width: 870px) {
     .contenedor-planetas {
         grid-template-columns: repeat(1, 280px);     
     }
@@ -156,7 +160,10 @@ $planetas: mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno;
             "expediciones"
             "orbita"
             "orbita";
-    }
+        } 
+}
+
+@media (max-width: 560px) {
     .titulo {
         font-size: 40px;
     }
@@ -167,5 +174,10 @@ $planetas: mercurio, venus, tierra, marte, jupiter, saturno, urano, neptuno;
         p {
             font-size:14px;
         }
+    }
+    .foto-contenedor {
+        width: auto;
+        height: 250px;
+        margin: 5px;
     }
 }

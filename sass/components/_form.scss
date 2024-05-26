@@ -2,9 +2,7 @@
     height: 100vh;
     font-family: $font3;
     color: $c0;
-    margin-top: $default2;
     text-align: center;
-
     h1{
         font-size: $default4;
         font-family: $font2;
@@ -48,17 +46,7 @@ textarea {
     font-size: $default2;
     background-color: rgba(0, 0, 0, 0.558);
 }
-button {
-    background-color: $c3;
-    color: $c0;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    button:hover {
-        background-color: $c5;
-    }
-}
+
 /////////////////media quiery//////////////////////
 @media only screen and (max-width: 660px) {
     .form {

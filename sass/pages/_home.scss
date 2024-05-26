@@ -1,12 +1,11 @@
 //h1 de las demas paginas
 h1 {
     color: $c0;
-    margin-top: 40px;
+    margin-top: 30px;
     text-align: center;
     font-size: $default4;
     font-family: $font2;
     text-shadow: 2px 2px 2px black; 
-
 }
 //titulo ESTELAR 
 .TituloPrincipal {
@@ -26,6 +25,7 @@ h1 {
     .TituloPrincipal {
         font-size: $default4;
     }
+    
 }
 
 @media (max-width: 450px) {

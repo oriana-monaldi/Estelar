@@ -18,7 +18,11 @@
   color: $c0;
   z-index: 1;
 }
-
+//boton planetas 
+.btn1 {
+  position: relative;
+  align-items: center;
+}
 .btn::before,
 .btn::after {
   content: '';
@@ -76,7 +80,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 0px 0px 4px $c3;
+    box-shadow: 0px 0px 0px 4px $c1;
     cursor: pointer;
     transition-duration: 0.3s;
     overflow: hidden;
@@ -97,7 +101,7 @@
     border-radius: $default3
 ;
     transition-duration: 0.3s;
-    background-color: $c3;
+    background-color: $c1;
     align-items: center;
   }
   
@@ -124,23 +128,37 @@
 
 //boton whatsapp
 .whatsapp {
-    height: 70px;
-    width: 70px;
-    background-color: $c2;
-    position: fixed;
-    right: 40px;
-    bottom: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    text-decoration: none;
+  height: 70px;
+  width: 70px;
+  background-color: $c2;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+  .fa-whatsapp {
+    color: black;
+    font-size: 40px;
+  }
 }
-.fa-whatsapp {
-  color: black;
-  font-size: 40px;
+.whatsapp:hover {
+  transform: scale(1.1);
 }
+@media (max-width: 650px) {
 
+  .whatsapp {
+    right: auto; 
+    left: 40px;  
+    width: 40px;
+    height: 40px;
+    .fa-whatsapp {
+      font-size: 30px;
+    }
+  } 
+}
 @media (max-width: 500px) {
   .btn {
     padding: 8px;    
@@ -159,4 +177,5 @@
     width: 10px  !important;
     height: 10px  !important;
   }
+
 }
