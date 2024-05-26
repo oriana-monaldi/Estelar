@@ -720,56 +720,56 @@ button button:hover {
 }
 
 .tarjeta-mercurio {
-  background-image: url("assets/sistemaSolar/mercurio.webp");
+  background-image: url("/assets/sistemaSolar/mercurio.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .tarjeta-venus {
-  background-image: url("assets/sistemaSolar/venus.webp");
+  background-image: url("/assets/sistemaSolar/venus.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .tarjeta-tierra {
-  background-image: url("assets/sistemaSolar/tierra.webp");
+  background-image: url("/assets/sistemaSolar/tierra.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .tarjeta-marte {
-  background-image: url("assets/sistemaSolar/marte.webp");
+  background-image: url("/assets/sistemaSolar/marte.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .tarjeta-jupiter {
-  background-image: url("assets/sistemaSolar/jupiter.webp");
+  background-image: url("/assets/sistemaSolar/jupiter.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .tarjeta-saturno {
-  background-image: url("assets/sistemaSolar/saturno.webp");
+  background-image: url("/assets/sistemaSolar/saturno.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .tarjeta-urano {
-  background-image: url("assets/sistemaSolar/urano.webp");
+  background-image: url("/assets/sistemaSolar/urano.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .tarjeta-neptuno {
-  background-image: url("assets/sistemaSolar/neptuno.webp");
+  background-image: url("/assets/sistemaSolar/neptuno.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
