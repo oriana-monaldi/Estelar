@@ -81,7 +81,7 @@
     width: 250%;
 }
 //imagenes dentro de las cards de pagina planetas
-$planetasNombres: rocketnasa, salidacohete, img10, estacionEsp, lanzamiento ;
+$planetasNombres: rocketNasa, salidaCohete, img10, estacionEsp, lanzamiento ;
 
 @for $i from 1 through length($planetasNombres) {
     $planetaNombre: nth($planetasNombres, $i);
