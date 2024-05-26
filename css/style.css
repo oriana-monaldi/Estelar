@@ -12,11 +12,11 @@ main {
 
 @font-face {
   font-family: "Galaxy";
-  src: url("assets/font/GALAXY aka COSMO.otf");
+  src: url("../assets/font/GALAXY aka COSMO.otf");
 }
 @font-face {
   font-family: "Mono";
-  src: url("assets/font/mono-grass.ttf");
+  src: url("../assets/font/mono-grass.ttf");
 }
 h1 {
   color: rgb(255, 255, 255);
@@ -230,11 +230,11 @@ footer .container .footer-right a:hover {
 
 .cardPlaneta:nth-child(1) {
   height: calc(100vh - 56px);
-  background-image: url("../assets/rocketNasa.webp");
+  background-image: url("../assets/rocketnasa.webp");
 }
 
 .cardPlaneta:nth-child(2) {
-  background-image: url("../assets/salidaCohete.webp");
+  background-image: url("../assets/salidacohete.webp");
 }
 
 .cardPlaneta:nth-child(3) {
