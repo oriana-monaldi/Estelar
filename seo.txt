@@ -1,0 +1,12 @@
+PERFORMANCE:
+1- Elimine los metadatos de las fotos del proyecto.
+2- Cambié la extension de los archivos a .webp.
+3- Comprimí los archivos.
+
+SEO:
+1- Agregué alt en todas las imagenes
+2- Agregué meta keywords a todas las paginas del sitio web.
+3- Agregué meta description a todas las paginas.
+4- gregué la etiqueta <strong> en las páginas webs.
+5- Utilice la etiqueta h1 en todas las páginas.
+
