@@ -133,7 +133,7 @@
   background-color: $c2;
   position: fixed;
   right: 40px;
-  bottom: 40px;
+  bottom: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -148,7 +148,6 @@
   transform: scale(1.1);
 }
 @media (max-width: 650px) {
-
   .whatsapp {
     right: auto; 
     left: 40px;  
@@ -165,17 +164,4 @@
     font-size: 14px; 
     border: 2px solid $c0; 
   }
-
-  .btn::before,
-  .btn::after {
-    width: $defaultPx !important; 
-    height: $defaultPx  !important;  
-  }
-
-  .btn:hover::before,
-  .btn:hover::after {
-    width: $defaultPx  !important;
-    height: $defaultPx  !important;
-  }
-
 }

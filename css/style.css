@@ -65,7 +65,7 @@ h1 {
 }
 .navbar .custom-toggler {
   border-color: rgb(255, 255, 255);
-  color: #C13584;
+  color: #2c9caf;
   z-index: 1000000000;
 }
 
@@ -405,7 +405,7 @@ footer .container .footer-right a:hover {
   background-color: rgb(37, 211, 102);
   position: fixed;
   right: 40px;
-  bottom: 40px;
+  bottom: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -438,19 +438,8 @@ footer .container .footer-right a:hover {
     font-size: 14px;
     border: 2px solid rgb(255, 255, 255);
   }
-  .btn::before,
-  .btn::after {
-    width: 10px !important;
-    height: 10px !important;
-  }
-  .btn:hover::before,
-  .btn:hover::after {
-    width: 10px !important;
-    height: 10px !important;
-  }
 }
 .contact {
-  height: 100vh;
   font-family: Roboto;
   color: rgb(255, 255, 255);
   text-align: center;
@@ -502,12 +491,16 @@ textarea {
 
 @media only screen and (max-width: 660px) {
   .form {
-    max-width: 250px;
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
   }
   .contact p {
     font-size: 15px;
+  }
+}
+@media only screen and (max-width: 415px) {
+  form {
+    max-width: 300px;
   }
 }
 .contenedor {
@@ -672,6 +665,7 @@ textarea {
   }
   .titulosPlanetas {
     font-size: 50px;
+    margin: 10px;
   }
   .text {
     width: 400px;

@@ -1,5 +1,4 @@
 .contact{ 
-    height: 100vh;
     font-family: $font3;
     color: $c0;
     text-align: center;
@@ -50,8 +49,7 @@ textarea {
 /////////////////media quiery//////////////////////
 @media only screen and (max-width: 660px) {
     .form {
-        max-width: 250px;
-        width: 80%; 
+        width: 60%; 
         margin: 0 auto;
     }
     .contact {
@@ -61,3 +59,8 @@ textarea {
     }
 }
 
+@media only screen and (max-width: 415px) {
+    form {
+        max-width: 300px;
+    }
+}
