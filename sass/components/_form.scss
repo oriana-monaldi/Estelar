@@ -12,6 +12,7 @@
 }
 form {
     max-width: 400px;
+    height: 550px;
     margin: 0 auto;
     margin-bottom: $default2;
     padding: $default2;
@@ -22,7 +23,9 @@ form {
         margin-bottom: 1rem;
     }
 }
-
+.informacionFormulario {
+    background-color: $c4;
+}
 label {
     display: block;
     color: $c0;

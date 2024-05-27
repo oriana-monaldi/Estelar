@@ -454,6 +454,7 @@ footer .container .footer-right a:hover {
 
 form {
   max-width: 400px;
+  height: 550px;
   margin: 0 auto;
   margin-bottom: 20px;
   padding: 20px;
@@ -463,6 +464,10 @@ form {
 }
 form .form-group {
   margin-bottom: 1rem;
+}
+
+.informacionFormulario {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 label {
