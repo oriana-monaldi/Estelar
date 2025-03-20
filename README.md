@@ -11,7 +11,7 @@
 ![Mobile View](assets/home/img/phone.png)
 
 ### 💻 Vista Desktop
-![Desktop View](assets/home/img/estelarinicio.png)
+![Desktop View](assets/home/img/estelarInicio.png)
 
 ### 📟 Vista iPad
 ![iPad View](assets/home/img/ipad.png)
